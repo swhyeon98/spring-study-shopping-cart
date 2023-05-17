@@ -16,6 +16,7 @@ public class Name {
 
     private void validate(String value) {
         validateEmpty(value);
+        validateNameLength(value);
     }
 
     private void validateEmpty(String value) {
