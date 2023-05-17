@@ -30,4 +30,8 @@ public class Name {
             throw new IllegalArgumentException(ERROR_MESSAGE + NAME_LENGTH_EXCEEDED_ERROR);
         }
     }
+
+    public String getValue() {
+        return value;
+    }
 }
