@@ -1,5 +1,7 @@
 package cart.domain;
 
+import java.util.Objects;
+
 public class ImageUrl {
     private static final String ERROR_MESSAGE = "[ERROR] ";
     private static final String URL_EMPTY_ERROR = "이미지 URL이 비어있습니다. 이미지 URL을 입력해주세요.";
@@ -32,5 +34,18 @@ public class ImageUrl {
 
     public String getValue() {
         return value;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ImageUrl imageUrl = (ImageUrl) o;
+        return Objects.equals(value, imageUrl.value);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(value);
     }
 }
